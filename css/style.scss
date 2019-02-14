@@ -47,6 +47,7 @@ $yellow-color: #D4CD00;
 	font-family: $font-stack-sans-serif;
 	font-size: 1.2em;
 	font-weight: 200;
+	text-align: justify;
 }
 
 @mixin general-subtitle-style {
@@ -61,14 +62,16 @@ $yellow-color: #D4CD00;
 body {
   @include font-1;
   header {
-		height: 560px;
+		height: 590px;
     .header-fixed {
-      background-color: rgba(244, 243, 240, .95);
+      background-color: rgba(244, 243, 240, 1);
       z-index: 10;
       position: fixed;
 			height: 200px;
 			width: 100%;
       #kabbalistic-tree  {
+				top: 600px;
+				position: relative;
         @media only screen and (min-width: 960px) {
           max-width: 680px;
           left: 220px;
@@ -81,20 +84,26 @@ body {
 				.navbar {
 					width: 100%;
 					padding: 0px;
-					a {
-						@include nav-text;
-						line-height: 100%;
-						position:relative
+					.active {
+						background: yellow;
 					}
-					.nav-dropped {
-						top: 12px;
-						position: relative;
+					li {
+						padding-left: 5px;
+						a {
+							@include nav-text;
+							line-height: 100%;
+							position: relative;
+						}
+						.nav-dropped {
+							top: 12px;
+							position: relative;
+						}
 					}
 				}
       }
     }
     .header-intro {
-			.title-alignment-flex {
+			.title-alignment {
 				margin-top: 92px;
 			}
       h1 {
@@ -106,15 +115,20 @@ body {
         text-align: right;
         font-size: 3em;
 				position: relative;
-				top: 60px;
+				@media screen and (max-width: 960px) {
+					text-align: center;
+				}
+				@media screen and (min-width: 960px) {
+					top: 73px;
+				}
       }
 			.header-title {
 				color: #D3CC00;
-				margin-top: 20px;
 				font-size: 6em;
 				font-style: italic;
 				text-align: center;
 				line-height: .5;
+
 			}
 			#index-header-margin {
 				margin-top: 160px;
@@ -135,192 +149,272 @@ body {
         cursor: grab;
       }
     }
+		.quote-right-section {
+			@include quote-section-style;
+			z-index: 2;
+			text-align: left;
+			padding: 0 80px;
+			#about-quote {
+				position: relative;
+				@media screen and (min-width: 720px) {
+					top: 240px;
+				}
+			}
+			#nondual-study-quote {
+				position: relative;
+				@media screen and (min-width: 720px) {
+					top: 320px;
+				}
+				.quote-right {
+					text-align: right;
+				}
+			}
+			#healing-quote {
+				position: relative;
+				@media screen and (min-width: 720px) {
+					top: 350px;
+				}
+				.quote-right {
+					text-align: right;
+				}
+			}
+		}
   }
 	.main-section {
 		position: relative;
 		z-index: 30;
 		width: 100%;
+		#main-title {
+			font-size: 2.7em;
+			top: 28px;
+			position: relative;
+			text-align: right;
+			@media screen and (max-width: 960px) {
+				text-align: center;
+			}
+		}
 		#main-bg-overlay {
 		background-color: white;
 		}
-		h3 {
-			text-align: right;
-		}
-	}
-	#border-around {
-		-webkit-box-shadow: 0px 0px 39px 3px rgba(0,0,0,.05);
-		-moz-box-shadow: 0px 0px 39px 3px rgba(0,0,0,.05);
-		box-shadow: 0px 0px 39px 3px rgba(0,0,0,.05);
-		padding-bottom: 100px;
-	}
-  .index-second-section {
-    margin-bottom: 100px;
-    h2 {
-      margin-left: 50px;
-      font-size: 1.7em;
-      padding-right: 150px;
-    }
-    h3 {
-      margin-left: 50px;
-      font-family: $font-stack-sans-serif;
-      font-weight: lighter;
-      font-size: 1.2em;
-      padding-right: 150px;
-    }
-    h4 {
-      margin-right: 50px;
-      font-size: 1.7em;
-      font-style: italic;
-      text-align: right;
-      color: $yellow-color;
-    }
-  }
-  .index-third-section {
-    border: $yellow-color solid 1px;
-    h1 {
-      font-size: 7em;
-      font-style: italic;
-      color: $yellow-color;
-      text-align: center;
-      position: relative;
-      bottom: 103px;
-    }
-  }
-	.quote-right-section {
-		@include quote-section-style;
-		/*.fixed {
-		position: fixed;
-		padding: 0 200px;
-	}*/
-	}
-	.top-border {
-		border-top: $yellow-color 6px solid;
-	}
-	.about-first-section {
-		h3 {
-			font-size: 2.4em;
-			text-align: center;
-			@media screen and (min-width: 720px) {
-				margin: 50px 0;
+		#border-around {
+			-webkit-box-shadow: 0px 0px 39px 3px rgba(0,0,0,.05);
+			-moz-box-shadow: 0px 0px 39px 3px rgba(0,0,0,.05);
+			box-shadow: 0px 0px 39px 3px rgba(0,0,0,.05);
+			padding-bottom: 100px;
+			.top-border {
+				border-top: $yellow-color 10px solid;
 			}
-			@media screen and (max-width: 720px) {
-				margin: 20px 0 50px 0;
+			.index-second-section {
+		    margin-bottom: 100px;
+		    h2 {
+		      margin-left: 50px;
+		      font-size: 1.7em;
+		      padding-right: 150px;
+		    }
+		    h3 {
+		      margin-left: 50px;
+		      font-family: $font-stack-sans-serif;
+		      font-weight: lighter;
+		      font-size: 1.2em;
+		      padding-right: 150px;
+		    }
+		    h4 {
+		      margin-right: 50px;
+		      font-size: 1.7em;
+		      font-style: italic;
+		      text-align: right;
+		      color: $yellow-color;
+		    }
+		  }
+		  .index-third-section {
+		    border: $yellow-color solid 1px;
+		    h1 {
+		      font-size: 7em;
+		      font-style: italic;
+		      color: $yellow-color;
+		      text-align: center;
+		      position: relative;
+		      bottom: 103px;
+		    }
+		  }
+			.about-first-section {
+				h3 {
+					font-size: 2.4em;
+					text-align: center;
+					@media screen and (min-width: 720px) {
+						margin: 50px 0;
+					}
+					@media screen and (max-width: 720px) {
+						margin: 20px 0 50px 0;
+					}
+				 span {
+					 color: $yellow-color;
+				 }
+				}
 			}
-		 span {
-			 color: $yellow-color;
-		 }
+			.about-second-section {
+				h4 {
+					@include general-subtitle-style;
+					margin: 0 0 20px 0;
+				}
+				p {
+					font-family: $font-stack-sans-serif;
+					font-weight: 300;
+					text-align: justify;
+				}
+				p:last-child {
+					margin-bottom: 50px;
+				}
+			}
+			.about-third-section {
+				h5 {
+					font-family: $font-stack-serif;
+					font-style: italic;
+					font-size: 3em;
+				}
+				h6 {
+					font-family: $font-stack-serif;
+					font-style: italic;
+					font-size: 1.2em;
+				}
+				p {
+					text-align: justify;
+				}
+			}
+			.nondual-first-section {
+				#main-intro-top {
+					text-align: left;
+					font-style: italic;
+					font-size: 1.5em;
+				}
+				#main-intro {
+					font-family: $font-stack-sans-serif;
+					font-weight: 200;
+					text-align: left;
+					font-size: 1.5em;
+					margin-bottom: 50px;
+				}
+				p {
+					font-family: $font-stack-sans-serif;
+					font-weight: 300;
+					font-size: 1em;
+					text-align: justify;
+				}
+				h4 {
+					margin: 20px 0 20px 0;
+					@include general-subtitle-style;
+				}
+			}
+			.nondual-second-section {
+				h5 {
+					font-family: $font-stack-serif;
+					font-style: italic;
+					text-align: center;
+					margin: 20px 0 30px 0;
+				}
+				h6 {
+					font-family: $font-stack-serif;
+					font-style: italic;
+				}
+				p {
+					font-family: $font-stack-serif;
+					font-weight: 300;
+					font-size: 1em;
+					text-align: justify;
+				}
+			}
+			.wcr-first-section {
+				h4 {
+					margin: 100px 0 0 0;
+					font-style: italic;
+					font-size: 2em;
+					line-height: .6;
+					.arrow {
+						top: 28px;
+						font-size: 4em;
+						position: relative;
+					}
+				}
+				section {
+					article {
+						border-top: .5px $yellow-color solid;
+						border-left: .5px $yellow-color solid;
+						border-right: .5px $yellow-color solid;
+						border-bottom: .5px $yellow-color solid;
+						padding-bottom: 50px;
+						h5 {
+							font-style: italic;
+							font-size: 2em;
+							text-align: center;
+							margin: 50px;
+						}
+						p {
+							text-align: justify;
+							font-family: $font-stack-sans-serif;
+							font-weight: 300;
+						}
+						.link-box {
+							margin-top: 50px;
+							position: relative;
+							float: right;
+							a {
+								border: rgba(0, 0, 0, 1) .5px solid;
+								font-family: $font-stack-serif;
+								font-style: italic;
+								padding: 10px 20px;
+								text-decoration: none;
+								font-size: .9em;
+								color: black;
+								@include transition;
+							}
+							a:hover {
+								background-color: rgba(0, 0, 0, .05);
+								border: rgba(0, 0, 0, 1) .5px solid;
+							}
+						}
+					}
+				}
+			}
+			.healing-first-section {
+				h3 {
+					font-size: 2.4em;
+					text-align: center;
+					@media screen and (min-width: 720px) {
+						margin: 50px 0;
+					}
+					@media screen and (max-width: 720px) {
+						margin: 20px 0 50px 0;
+					}
+				}
+			}
+			.healing-second-section {
+				h4 {
+					font-style: italic;
+					font-size: 2em;
+					text-align: center;
+				}
+			}
+			#recent-post-img {
+				height: 250px;
+				background-color: #F4F3F0;
+			}
 		}
-	}
-	.about-second-section {
-		h4 {
-			@include general-subtitle-style;
-			margin: 0 0 20px 0;
-		}
-		p {
-			font-family: $font-stack-sans-serif;
-			font-weight: 300;
-			text-align: justify;
-		}
-		p:last-child {
-			margin-bottom: 50px;
-		}
-	}
-	.about-third-section {
-		h5 {
-			font-family: $font-stack-serif;
-			font-style: italic;
-			font-size: 3em;
-		}
-		h6 {
-			font-family: $font-stack-serif;
-			font-style: italic;
-			font-size: 1.2em;
-		}
-		p {
-			text-align: justify;
-		}
-	}
-	.nondual-first-section {
-		p {
-			font-family: $font-stack-sans-serif;
-			font-weight: 300;
-			font-size: 1em;
-			text-align: justify;
-		}
-		h4 {
-			margin: 50px 0 20px 0;
-			@include general-subtitle-style;
-		}
-	}
-	.nondual-second-section {
-		h5 {
-			font-family: $font-stack-serif;
-			font-style: italic;
-			text-align: center;
-		}
-		h6 {
-			font-family: $font-stack-serif;
-			font-style: italic;
-		}
-		p {
-			font-family: $font-stack-serif;
-			font-weight: 300;
-			font-size: 1em;
-			text-align: justify;
-		}
-	}
-	.wcr-first-section {
-		h4 {
-			margin: 100px 0 0 0;
-			font-style: italic;
-			font-size: 2em;
-		}
-		article {
-			border-top: 8px $yellow-color solid;
-			border-left: 1px $yellow-color solid;
-			border-right: 1px $yellow-color solid;
-			border-bottom: 1px $yellow-color solid;
-			padding-bottom: 50px;
-		}
-		h5 {
-			font-style: italic;
-			font-size: 2em;
-			text-align: center;
-			margin: 50px;
-		}
-		p {
-			text-align: justify;
-			font-family: $font-stack-sans-serif;
-			font-weight: 300;
-		}
-		a {
-			border: rgba(0, 0, 0, 1) .5px solid;
-			font-family: $font-stack-serif;
-			font-style: italic;
-			padding: 10px 20px;
-			margin-top: 20px;
-			text-decoration: none;
-			font-size: .9em;
-			color: black;
-			@include transition;
-		}
-		a:hover {
-			background-color: rgba(0, 0, 0, .05);
-			border: rgba(0, 0, 0, 1) .5px solid;
-		}
-	}
-
-	#recent-post-img {
-		height: 250px;
-		background-color: #F4F3F0;
 	}
 }
 footer {
 	margin-bottom: 100px;
 }
 
+.sticky-top {
+  @supports (position: sticky) or (position: -webkit-sticky) {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+  }
+}
+
 /* HIGHLIGHT */
-/*.row [class*='col-'] {
+.row [class*='col-'] {
       background-color: rgba(255, 194, 180, .3);
       background-clip: content-box;
       min-height: 20px;

@@ -5,33 +5,40 @@ body {
   font-family: "Baskerville", serif !important;
   color: #000000 !important; }
   body header {
-    height: 560px; }
+    height: 590px; }
     body header .header-fixed {
-      background-color: rgba(244, 243, 240, 0.95);
+      background-color: #f4f3f0;
       z-index: 10;
       position: fixed;
       height: 200px;
       width: 100%; }
-      @media only screen and (min-width: 960px) {
-        body header .header-fixed #kabbalistic-tree {
-          max-width: 680px;
-          left: 220px;
-          top: -4px;
-          position: fixed;
-          z-index: 50; } }
+      body header .header-fixed #kabbalistic-tree {
+        top: 600px;
+        position: relative; }
+        @media only screen and (min-width: 960px) {
+          body header .header-fixed #kabbalistic-tree {
+            max-width: 680px;
+            left: 220px;
+            top: -4px;
+            position: fixed;
+            z-index: 50; } }
       body header .header-fixed .nav-alignment .navbar {
         width: 100%;
         padding: 0px; }
-        body header .header-fixed .nav-alignment .navbar a {
-          font-family: "Baskerville", serif !important;
-          color: #000000 !important;
-          font-size: 1.2em !important;
-          line-height: 100%;
-          position: relative; }
-        body header .header-fixed .nav-alignment .navbar .nav-dropped {
-          top: 12px;
-          position: relative; }
-    body header .header-intro .title-alignment-flex {
+        body header .header-fixed .nav-alignment .navbar .active {
+          background: yellow; }
+        body header .header-fixed .nav-alignment .navbar li {
+          padding-left: 5px; }
+          body header .header-fixed .nav-alignment .navbar li a {
+            font-family: "Baskerville", serif !important;
+            color: #000000 !important;
+            font-size: 1.2em !important;
+            line-height: 100%;
+            position: relative; }
+          body header .header-fixed .nav-alignment .navbar li .nav-dropped {
+            top: 12px;
+            position: relative; }
+    body header .header-intro .title-alignment {
       margin-top: 92px; }
     body header .header-intro h1 {
       font-size: 9em;
@@ -42,11 +49,15 @@ body {
       font-family: "Baskerville", serif !important;
       text-align: right;
       font-size: 3em;
-      position: relative;
-      top: 60px; }
+      position: relative; }
+      @media screen and (max-width: 960px) {
+        body header .header-intro h2 {
+          text-align: center; } }
+      @media screen and (min-width: 960px) {
+        body header .header-intro h2 {
+          top: 73px; } }
     body header .header-intro .header-title {
       color: #D3CC00;
-      margin-top: 20px;
       font-size: 6em;
       font-style: italic;
       text-align: center;
@@ -66,165 +77,226 @@ body {
       margin-right: auto;
       padding: 30px;
       cursor: grab; }
+    body header .quote-right-section {
+      font-family: "Raleway", sans-serif !important;
+      font-size: 1.2em;
+      font-weight: 200;
+      text-align: justify;
+      z-index: 2;
+      text-align: left;
+      padding: 0 80px; }
+      body header .quote-right-section #about-quote {
+        position: relative; }
+        @media screen and (min-width: 720px) {
+          body header .quote-right-section #about-quote {
+            top: 240px; } }
+      body header .quote-right-section #nondual-study-quote {
+        position: relative; }
+        @media screen and (min-width: 720px) {
+          body header .quote-right-section #nondual-study-quote {
+            top: 320px; } }
+        body header .quote-right-section #nondual-study-quote .quote-right {
+          text-align: right; }
+      body header .quote-right-section #healing-quote {
+        position: relative; }
+        @media screen and (min-width: 720px) {
+          body header .quote-right-section #healing-quote {
+            top: 350px; } }
+        body header .quote-right-section #healing-quote .quote-right {
+          text-align: right; }
   body .main-section {
     position: relative;
     z-index: 30;
     width: 100%; }
+    body .main-section #main-title {
+      font-size: 2.7em;
+      top: 28px;
+      position: relative;
+      text-align: right; }
+      @media screen and (max-width: 960px) {
+        body .main-section #main-title {
+          text-align: center; } }
     body .main-section #main-bg-overlay {
       background-color: white; }
-    body .main-section h3 {
-      text-align: right; }
-  body #border-around {
-    -webkit-box-shadow: 0px 0px 39px 3px rgba(0, 0, 0, 0.05);
-    -moz-box-shadow: 0px 0px 39px 3px rgba(0, 0, 0, 0.05);
-    box-shadow: 0px 0px 39px 3px rgba(0, 0, 0, 0.05);
-    padding-bottom: 100px; }
-  body .index-second-section {
-    margin-bottom: 100px; }
-    body .index-second-section h2 {
-      margin-left: 50px;
-      font-size: 1.7em;
-      padding-right: 150px; }
-    body .index-second-section h3 {
-      margin-left: 50px;
-      font-family: "Raleway", sans-serif !important;
-      font-weight: lighter;
-      font-size: 1.2em;
-      padding-right: 150px; }
-    body .index-second-section h4 {
-      margin-right: 50px;
-      font-size: 1.7em;
-      font-style: italic;
-      text-align: right;
-      color: #D4CD00; }
-  body .index-third-section {
-    border: #D4CD00 solid 1px; }
-    body .index-third-section h1 {
-      font-size: 7em;
-      font-style: italic;
-      color: #D4CD00;
-      text-align: center;
-      position: relative;
-      bottom: 103px; }
-  body .quote-right-section {
-    font-family: "Raleway", sans-serif !important;
-    font-size: 1.2em;
-    font-weight: 200;
-    	/*.fixed {
-    	position: fixed;
-    	padding: 0 200px;
-    }*/ }
-  body .top-border {
-    border-top: #D4CD00 6px solid; }
-  body .about-first-section h3 {
-    font-size: 2.4em;
-    text-align: center; }
-    @media screen and (min-width: 720px) {
-      body .about-first-section h3 {
-        margin: 50px 0; } }
-    @media screen and (max-width: 720px) {
-      body .about-first-section h3 {
-        margin: 20px 0 50px 0; } }
-    body .about-first-section h3 span {
-      color: #D4CD00; }
-  body .about-second-section h4 {
-    text-align: center;
-    font-size: 2em;
-    font-style: italic;
-    font-family: "Baskerville", serif !important;
-    margin: 0 0 20px 0; }
-  body .about-second-section p {
-    font-family: "Raleway", sans-serif !important;
-    font-weight: 300;
-    text-align: justify; }
-  body .about-second-section p:last-child {
-    margin-bottom: 50px; }
-  body .about-third-section h5 {
-    font-family: "Baskerville", serif !important;
-    font-style: italic;
-    font-size: 3em; }
-  body .about-third-section h6 {
-    font-family: "Baskerville", serif !important;
-    font-style: italic;
-    font-size: 1.2em; }
-  body .about-third-section p {
-    text-align: justify; }
-  body .nondual-first-section p {
-    font-family: "Raleway", sans-serif !important;
-    font-weight: 300;
-    font-size: 1em;
-    text-align: justify; }
-  body .nondual-first-section h4 {
-    margin: 50px 0 20px 0;
-    text-align: center;
-    font-size: 2em;
-    font-style: italic;
-    font-family: "Baskerville", serif !important; }
-  body .nondual-second-section h5 {
-    font-family: "Baskerville", serif !important;
-    font-style: italic;
-    text-align: center; }
-  body .nondual-second-section h6 {
-    font-family: "Baskerville", serif !important;
-    font-style: italic; }
-  body .nondual-second-section p {
-    font-family: "Baskerville", serif !important;
-    font-weight: 300;
-    font-size: 1em;
-    text-align: justify; }
-  body .wcr-first-section h4 {
-    margin: 100px 0 0 0;
-    font-style: italic;
-    font-size: 2em; }
-  body .wcr-first-section article {
-    border-top: 8px #D4CD00 solid;
-    border-left: 1px #D4CD00 solid;
-    border-right: 1px #D4CD00 solid;
-    border-bottom: 1px #D4CD00 solid;
-    padding-bottom: 50px; }
-  body .wcr-first-section h5 {
-    font-style: italic;
-    font-size: 2em;
-    text-align: center;
-    margin: 50px; }
-  body .wcr-first-section p {
-    text-align: justify;
-    font-family: "Raleway", sans-serif !important;
-    font-weight: 300; }
-  body .wcr-first-section a {
-    border: black 0.5px solid;
-    font-family: "Baskerville", serif !important;
-    font-style: italic;
-    padding: 10px 20px;
-    margin-top: 20px;
-    text-decoration: none;
-    font-size: .9em;
-    color: black;
-    transition: .5s;
-    -webkit-transition: .5s;
-    -moz-transition: .5s;
-    -ms-transition: .5s;
-    -o-transition: .5s; }
-  body .wcr-first-section a:hover {
-    background-color: rgba(0, 0, 0, 0.05);
-    border: black 0.5px solid; }
-  body #recent-post-img {
-    height: 250px;
-    background-color: #F4F3F0; }
+    body .main-section #border-around {
+      -webkit-box-shadow: 0px 0px 39px 3px rgba(0, 0, 0, 0.05);
+      -moz-box-shadow: 0px 0px 39px 3px rgba(0, 0, 0, 0.05);
+      box-shadow: 0px 0px 39px 3px rgba(0, 0, 0, 0.05);
+      padding-bottom: 100px; }
+      body .main-section #border-around .top-border {
+        border-top: #D4CD00 10px solid; }
+      body .main-section #border-around .index-second-section {
+        margin-bottom: 100px; }
+        body .main-section #border-around .index-second-section h2 {
+          margin-left: 50px;
+          font-size: 1.7em;
+          padding-right: 150px; }
+        body .main-section #border-around .index-second-section h3 {
+          margin-left: 50px;
+          font-family: "Raleway", sans-serif !important;
+          font-weight: lighter;
+          font-size: 1.2em;
+          padding-right: 150px; }
+        body .main-section #border-around .index-second-section h4 {
+          margin-right: 50px;
+          font-size: 1.7em;
+          font-style: italic;
+          text-align: right;
+          color: #D4CD00; }
+      body .main-section #border-around .index-third-section {
+        border: #D4CD00 solid 1px; }
+        body .main-section #border-around .index-third-section h1 {
+          font-size: 7em;
+          font-style: italic;
+          color: #D4CD00;
+          text-align: center;
+          position: relative;
+          bottom: 103px; }
+      body .main-section #border-around .about-first-section h3 {
+        font-size: 2.4em;
+        text-align: center; }
+        @media screen and (min-width: 720px) {
+          body .main-section #border-around .about-first-section h3 {
+            margin: 50px 0; } }
+        @media screen and (max-width: 720px) {
+          body .main-section #border-around .about-first-section h3 {
+            margin: 20px 0 50px 0; } }
+        body .main-section #border-around .about-first-section h3 span {
+          color: #D4CD00; }
+      body .main-section #border-around .about-second-section h4 {
+        text-align: center;
+        font-size: 2em;
+        font-style: italic;
+        font-family: "Baskerville", serif !important;
+        margin: 0 0 20px 0; }
+      body .main-section #border-around .about-second-section p {
+        font-family: "Raleway", sans-serif !important;
+        font-weight: 300;
+        text-align: justify; }
+      body .main-section #border-around .about-second-section p:last-child {
+        margin-bottom: 50px; }
+      body .main-section #border-around .about-third-section h5 {
+        font-family: "Baskerville", serif !important;
+        font-style: italic;
+        font-size: 3em; }
+      body .main-section #border-around .about-third-section h6 {
+        font-family: "Baskerville", serif !important;
+        font-style: italic;
+        font-size: 1.2em; }
+      body .main-section #border-around .about-third-section p {
+        text-align: justify; }
+      body .main-section #border-around .nondual-first-section #main-intro-top {
+        text-align: left;
+        font-style: italic;
+        font-size: 1.5em; }
+      body .main-section #border-around .nondual-first-section #main-intro {
+        font-family: "Raleway", sans-serif !important;
+        font-weight: 200;
+        text-align: left;
+        font-size: 1.5em;
+        margin-bottom: 50px; }
+      body .main-section #border-around .nondual-first-section p {
+        font-family: "Raleway", sans-serif !important;
+        font-weight: 300;
+        font-size: 1em;
+        text-align: justify; }
+      body .main-section #border-around .nondual-first-section h4 {
+        margin: 20px 0 20px 0;
+        text-align: center;
+        font-size: 2em;
+        font-style: italic;
+        font-family: "Baskerville", serif !important; }
+      body .main-section #border-around .nondual-second-section h5 {
+        font-family: "Baskerville", serif !important;
+        font-style: italic;
+        text-align: center;
+        margin: 20px 0 30px 0; }
+      body .main-section #border-around .nondual-second-section h6 {
+        font-family: "Baskerville", serif !important;
+        font-style: italic; }
+      body .main-section #border-around .nondual-second-section p {
+        font-family: "Baskerville", serif !important;
+        font-weight: 300;
+        font-size: 1em;
+        text-align: justify; }
+      body .main-section #border-around .wcr-first-section h4 {
+        margin: 100px 0 0 0;
+        font-style: italic;
+        font-size: 2em;
+        line-height: .6; }
+        body .main-section #border-around .wcr-first-section h4 .arrow {
+          top: 28px;
+          font-size: 4em;
+          position: relative; }
+      body .main-section #border-around .wcr-first-section section article {
+        border-top: 0.5px #D4CD00 solid;
+        border-left: 0.5px #D4CD00 solid;
+        border-right: 0.5px #D4CD00 solid;
+        border-bottom: 0.5px #D4CD00 solid;
+        padding-bottom: 50px; }
+        body .main-section #border-around .wcr-first-section section article h5 {
+          font-style: italic;
+          font-size: 2em;
+          text-align: center;
+          margin: 50px; }
+        body .main-section #border-around .wcr-first-section section article p {
+          text-align: justify;
+          font-family: "Raleway", sans-serif !important;
+          font-weight: 300; }
+        body .main-section #border-around .wcr-first-section section article .link-box {
+          margin-top: 50px;
+          position: relative;
+          float: right; }
+          body .main-section #border-around .wcr-first-section section article .link-box a {
+            border: black 0.5px solid;
+            font-family: "Baskerville", serif !important;
+            font-style: italic;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-size: .9em;
+            color: black;
+            transition: .5s;
+            -webkit-transition: .5s;
+            -moz-transition: .5s;
+            -ms-transition: .5s;
+            -o-transition: .5s; }
+          body .main-section #border-around .wcr-first-section section article .link-box a:hover {
+            background-color: rgba(0, 0, 0, 0.05);
+            border: black 0.5px solid; }
+      body .main-section #border-around .healing-first-section h3 {
+        font-size: 2.4em;
+        text-align: center; }
+        @media screen and (min-width: 720px) {
+          body .main-section #border-around .healing-first-section h3 {
+            margin: 50px 0; } }
+        @media screen and (max-width: 720px) {
+          body .main-section #border-around .healing-first-section h3 {
+            margin: 20px 0 50px 0; } }
+      body .main-section #border-around .healing-second-section h4 {
+        font-style: italic;
+        font-size: 2em;
+        text-align: center; }
+      body .main-section #border-around #recent-post-img {
+        height: 250px;
+        background-color: #F4F3F0; }
 
 footer {
   margin-bottom: 100px; }
 
+@supports (position: sticky) or (position: -webkit-sticky) {
+  .sticky-top {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0; } }
+
 /* HIGHLIGHT */
-/*.row [class*='col-'] {
-      background-color: rgba(255, 194, 180, .3);
-      background-clip: content-box;
-      min-height: 20px;
-}
+.row [class*='col-'] {
+  background-color: rgba(255, 194, 180, 0.3);
+  background-clip: content-box;
+  min-height: 20px; }
 
 .dropdown-toggle::after {
-    display:none !important;
-}
+  display: none !important; }
 
 /*.rox {
   min-width: 700px;
